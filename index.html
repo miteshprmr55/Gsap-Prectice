@@ -38,6 +38,32 @@
             <span class="char">r</span>
         </div>
 
+        <div class="down-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+    </div>
+
+    <div class="animation-two">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="animation-two-image">
+                    <img src="./images/img-1.jpg" class="animationtwoimg">
+                    <img src="./images/mitesh photos.jpg" class="animationtwoimg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="animation-two-image">
+                    <img src="./images/img-3.jpg" class="animationtwoimg">
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <script src="js/jquery.min.js"></script>
@@ -60,9 +86,33 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
 
+    <!-- ==== animation main (one) start ==== -->
     <script>
         gsap.to('.char', { color: 'white', duration: 3, stagger: { from: 'random', amount: 1, repeat: -1, } })
+        gsap.to('.fa-chevron-down', { color: 'white', duration: 1, stagger: { from: 'random', amount: 1, repeat: -1, } })
     </script>
+    <!-- ==== animation main (one) End ==== -->
+
+    <!-- ==== animation two start ==== -->
+
+    <script>
+
+        gsap.to(".animationtwoimg", {
+            scrollTrigger: {
+
+                trigger: ".animationtwoimg",
+                start: "top bottom",
+                end: "top 0px",
+                scrub: true
+            },
+            scale: 1.6,
+            ease: "none",
+            duration: 2
+        })
+
+    </script>
+
+    <!-- ==== animation two End ==== -->
 
 </body>
 

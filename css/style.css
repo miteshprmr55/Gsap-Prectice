@@ -98,6 +98,10 @@ body {
     width: 100%;
 }
 
+/* ========== start ========== */
+
+/* ==== animation main ( one ) start ==== */
+
 .animation-main {
     width: 100%;
     height: 100vh;
@@ -107,6 +111,7 @@ body {
     justify-content: center;
     flex-direction: column;
     overflow-x: hidden;
+    position: relative;
 }
 
 .word .char {
@@ -116,3 +121,54 @@ body {
     font-family: fantasy;
     letter-spacing: 10px;
 }
+
+.down-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.down-arrow i {
+    color: #ffffff54;
+    font-size: 22px;
+}
+
+.down-arrow i:nth-child(2) {
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+/* ==== animation main ( one ) End ==== */
+
+/* ==== animation two Start ==== */
+
+.animation-two .row {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+}
+
+.animation-two .row .col-md-6 {
+    padding: 0px;
+}
+
+.animation-two-image {
+    overflow: hidden;
+}
+
+.animation-two-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.animation-two-image img:nth-child(2) {
+    display: none;
+}
+
+/* ==== animation two End ==== */
