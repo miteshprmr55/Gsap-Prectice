@@ -304,6 +304,8 @@ body {
     font-weight: 700;
     font-family: cursive;
     margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
 }
 
 .animation-five h2 {
