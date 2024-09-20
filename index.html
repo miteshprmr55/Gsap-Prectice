@@ -19,6 +19,8 @@
 
 <body>
 
+    <!-- ==== animation one start ==== -->
+
     <div class="animation-main">
 
         <div class="word" data-aos="fade-right" data-aos-duration="3000">
@@ -38,6 +40,7 @@
             <span class="char">r</span>
         </div>
 
+
         <div class="down-arrow">
             <i class="fa-solid fa-chevron-down"></i>
             <i class="fa-solid fa-chevron-down"></i>
@@ -45,6 +48,10 @@
         </div>
 
     </div>
+
+    <!-- ==== animation one End ==== -->
+
+    <!-- ==== animation Two start ==== -->
 
     <div class="animation-two">
 
@@ -65,6 +72,8 @@
         </div>
 
     </div>
+
+    <!-- ==== animation Two End ==== -->
 
     <!-- ==== animation three start ==== -->
 
@@ -104,6 +113,32 @@
     </section>
 
     <!-- ==== animation three End ==== -->
+
+    <!-- ==== animation four start ==== -->
+
+    <div class="animation-four">
+
+        <span class="my-char">M</span>
+        <span class="my-char-two">i</span>
+        <span class="my-char">t</span>
+        <span class="my-char-two">e</span>
+        <span class="my-char">s</span>
+        <span class="my-char-two">h</span>
+
+    </div>
+
+    <!-- ==== animation four End ==== -->
+
+    <!-- ==== animation five start ==== -->
+
+    <div class="animation-five">
+
+        <h1>im mitesh</h1>
+        <h2>im @ Web-Designer</h2>
+
+    </div>
+
+    <!-- ==== animation five End ==== -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -165,6 +200,87 @@
     </script>
 
     <!-- ==== animation three End ==== -->
+
+    <!-- ==== animation four start ==== -->
+
+    <script>
+        var tl = gsap.timeline()
+
+        tl.from(".my-char", {
+            y: -50,
+            duration: 1.2,
+            stagger: -0.3,
+            scrollTrigger: {
+                trigger: ".my-char",
+                scroller: "body",
+                start: "top 70%",
+                end: "top 10%",
+                scrub: 2,
+                // markers: true 
+            }
+        })
+    </script>
+
+    <script>
+        var tl = gsap.timeline()
+
+        tl.from(".my-char-two", {
+            y: 50,
+            duration: 1.2,
+            stagger: -0.3,
+            scrollTrigger: {
+                trigger: ".my-char-two",
+                scroller: "body",
+                start: "top 70%",
+                end: "top 40%",
+                scrub: 2,
+                // markers: true
+            }
+        })
+    </script>
+
+    <!-- ==== animation four End ==== -->
+
+    <!-- ==== animation five start ==== -->
+
+    <script>
+        var tl = gsap.timeline()
+
+        tl.from(".animation-five h1", {
+            x: -400,
+            duration: 1.2,
+            stagger: -0.3,
+            scrollTrigger: {
+                trigger: ".animation-five h1",
+                scroller: "body",
+                start: "top 70%",
+                end: "top 40%",
+                scrub: 2,
+                // markers: true
+            }
+        })
+    </script>
+
+    <script>
+        var tl = gsap.timeline()
+
+        tl.from(".animation-five h2", {
+            x: 400,
+            duration: 1.2,
+            stagger: -0.3,
+            scrollTrigger: {
+                trigger: ".animation-five h2",
+                scroller: "body",
+                start: "top 70%",
+                end: "top 40%",
+                scrub: 2,
+                // markers: true
+            }
+        })
+    </script>
+
+    <!-- ==== animation five End ==== -->
+
 
 </body>
 
