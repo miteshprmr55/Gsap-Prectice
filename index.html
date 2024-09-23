@@ -140,6 +140,14 @@
 
     <!-- ==== animation five End ==== -->
 
+    <!-- ==== animation six start ==== -->
+    <!-- ==== cursor ==== -->
+
+    <div id="cursor"></div>
+    <!-- <div id="main"></div> -->
+
+    <!-- ==== animation six End ==== -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
@@ -280,6 +288,26 @@
     </script>
 
     <!-- ==== animation five End ==== -->
+
+    <!-- ==== animation six start ==== -->
+    <!-- ==== cursor ==== -->
+    <script>
+
+        var main = document.querySelector("body")
+
+        var cursor = document.querySelector("#cursor")
+
+        main.addEventListener("mousemove", function (dets) {
+            gsap.to(cursor, {
+                x: dets.x,
+                y: dets.y,
+                duration: 1,
+                ease: "back.out"
+            })
+        })
+
+    </script>
+    <!-- ==== animation six End ==== -->
 
 
 </body>
