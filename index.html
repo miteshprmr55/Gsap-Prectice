@@ -148,6 +148,47 @@
 
     <!-- ==== animation six End ==== -->
 
+    <!-- ==== animation seven ( text video background ) start ==== -->
+
+    <div class="animation-seven">
+        <video autoplay loop muted>
+            <source src="./images/1.mp4" type="video/mp4">
+        </video>
+        <div class="animation-seven-text">
+            <h1>Mitesh</h1>
+        </div>
+    </div>
+
+    <!-- ==== animation seven ( text video background ) End ==== -->
+
+    <!-- ==== animation eight ( nav menu hover & click audio effect ) start ==== -->
+
+    <div class="navmenu">
+
+        <audio id="powerOn" controls loop>
+            <source src="./images/audioclick.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="powerOff" controls>
+            <source src="./images/audioclick.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="hover" controls>
+            <source src="./images/audioclick.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <ul class="menu a">
+            <li><a href="javascript:;">Mitesh</a></li>
+            <li><a href="javascript:;">Jay</a></li>
+            <li><a href="javascript:;">Rahul</a></li>
+            <li><a href="javascript:;">Anish</a></li>
+        </ul>
+
+    </div>
+
+    <!-- ==== animation eight ( nav menu hover & click audio effect ) End ==== -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
@@ -308,6 +349,46 @@
 
     </script>
     <!-- ==== animation six End ==== -->
+
+    <!-- ==== animation eight ( nav menu hover & click audio effect ) start ====  -->
+
+    <script>
+        $(document).ready(function () {
+            $(".off").hide();
+            $("#play").click(function () {
+                if ($(this).hasClass("active")) {
+                    $(".off").hide();
+                    $(".on").fadeIn();
+                    $("#powerOn")[0].pause();
+                    $("#powerOff")[0].play();
+                    $(this).toggleClass("active");
+                    $(
+                        ".machine-art-container, .machine-lights-container, .boon h1, .bane h1"
+                    ).toggleClass("active");
+                } else {
+                    $(".on").hide();
+                    $(".off").fadeIn();
+                    $("#powerOn")[0].play();
+                    $("#powerOff")[0].pause();
+                    $("#powerOff")[0].currentTime = 0;
+                    $(this).toggleClass("active");
+                    $(
+                        ".machine-art-container, .machine-lights-container, .boon h1, .bane h1"
+                    ).toggleClass("active");
+                }
+            });
+            $(".menu a").mouseover(function () {
+                $("#hover")[0].play();
+            });
+            $(".menu a").mouseout(function () {
+                $("#hover")[0].pause();
+                $("#hover")[0].currentTime = 0;
+            });
+        });
+    </script>
+
+
+    <!-- ==== animation eight ( nav menu hover & click audio effect ) End ====  -->
 
 
 </body>

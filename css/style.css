@@ -112,8 +112,48 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     position: relative;
-    position: sticky;
-    top: 0;
+}
+
+.animation-main::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/gear-wide-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    filter: brightness(0) saturate(100%) invert(80%) sepia(1%) saturate(7%) hue-rotate(22deg) brightness(108%) contrast(92%);
+    width: 500px;
+    height: 500px;
+    background-size: 100% 100%;
+    left: 0px;
+    right: 0;
+    margin: auto;
+    top: 150px;
+    opacity: 0.4;
+    animation: rtet 8s linear infinite;
+}
+
+@keyframes rtet {
+
+    0% {
+        transform: rotate(-360deg);
+        filter: brightness(0) saturate(100%) invert(50%) sepia(93%) saturate(2777%) hue-rotate(176deg) brightness(96%) contrast(110%);
+    }
+
+    25% {
+        filter: brightness(0) saturate(100%) invert(20%) sepia(86%) saturate(3999%) hue-rotate(323deg) brightness(89%) contrast(131%);
+    }
+
+    50% {
+        filter: brightness(0) saturate(100%) invert(81%) sepia(36%) saturate(5419%) hue-rotate(128deg) brightness(110%) contrast(109%);
+    }
+
+    75% {
+        filter: brightness(0) saturate(100%) invert(78%) sepia(36%) saturate(5998%) hue-rotate(79deg) brightness(125%) contrast(138%);
+    }
+
+    100% {
+        filter: brightness(0) saturate(100%) invert(92%) sepia(65%) saturate(5464%) hue-rotate(9deg) brightness(107%) contrast(106%);
+    }
+
 }
 
 .word .char {
@@ -122,7 +162,33 @@ body {
     text-transform: uppercase;
     font-family: fantasy;
     letter-spacing: 10px;
+    animation: txtclrcnge 8s linear infinite;
 }
+
+@keyframes txtclrcnge {
+
+    0% {
+        filter: brightness(0) saturate(100%) invert(50%) sepia(93%) saturate(2777%) hue-rotate(176deg) brightness(96%) contrast(110%);
+    }
+
+    25% {
+        filter: brightness(0) saturate(100%) invert(20%) sepia(86%) saturate(3999%) hue-rotate(323deg) brightness(89%) contrast(131%);
+    }
+
+    50% {
+        filter: brightness(0) saturate(100%) invert(81%) sepia(36%) saturate(5419%) hue-rotate(128deg) brightness(110%) contrast(109%);
+    }
+
+    75% {
+        filter: brightness(0) saturate(100%) invert(78%) sepia(36%) saturate(5998%) hue-rotate(79deg) brightness(125%) contrast(138%);
+    }
+
+    100% {
+        filter: brightness(0) saturate(100%) invert(92%) sepia(65%) saturate(5464%) hue-rotate(9deg) brightness(107%) contrast(106%);
+    }
+
+}
+
 
 .down-arrow {
     position: absolute;
@@ -377,40 +443,129 @@ body {
 #cursor {
     width: 28px;
     height: 28px;
-    background-color: white;
     position: fixed;
     top: 0;
     border-radius: 50%;
     z-index: 999;
-    box-shadow: 0px 0px 8px 3px gray;
-    animation: grdnt 2s infinite;
-}
-
-@keyframes grdnt {
-
-    0% {
-        box-shadow: 0px 0px 9px 4px #18ff004d;
-    }
-
-    25% {
-        box-shadow: 0px 0px 10px 5px #2600ff4a;
-    }
-
-    50% {
-        box-shadow: 0px 0px 12px 6px #ff00f64d;
-    }
-
-    100% {
-        box-shadow: 0px 0px 13px 7px #ffa90052;
-    }
-
-}
-
-#main {
-    width: 100%;
-    height: 100%;
-    background: red;
-    position: absolute;
+    background-image: url(../images/gear.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(4%) saturate(1312%) hue-rotate(193deg) brightness(112%) contrast(73%);
 }
 
 /* ==== animation six End ==== */
+
+/* ==== animation seven ( text video background ) start ==== */
+
+.animation-seven {
+    width: 100%;
+    height: 95vh;
+    background-color: black;
+    position: relative;
+    border: 10px solid;
+    border-image: linear-gradient(45deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;
+    animation: brdrani 2s infinite;
+}
+
+@keyframes brdrani {
+    0% {
+        border-image: linear-gradient(360deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;
+    }
+
+    25% {
+        border-image: linear-gradient(180deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;
+    }
+
+    50% {
+        border-image: linear-gradient(90deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;
+    }
+
+    75% {
+        border-image: linear-gradient(45deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;
+    }
+
+    100% {
+        border-image: linear-gradient(0deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;
+    }
+
+}
+
+.animation-seven video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.animation-seven-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: multiply;
+}
+
+.animation-seven-text h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: system-ui;
+    font-weight: 900;
+    font-size: 125px;
+}
+
+
+
+/* ==== animation seven ( text video background ) End ==== */
+
+/* ==== animation eight ( nav menu hover & click audio effect ) start ==== */
+
+.navmenu {
+    width: 100%;
+    height: auto;
+    background-color: #70686a;
+    position: fixed;
+    top: 0;
+    padding: 10px 0px;
+}
+
+.navmenu ul {
+    padding: 0px;
+    width: fit-content;
+    margin: auto;
+}
+
+.navmenu ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navmenu ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: math;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 8px 10px;
+}
+
+.navmenu ul li a:hover {
+    background: #362d2d;
+}
+
+audio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+
+/* ==== animation eight ( nav menu hover & click audio effect ) End ==== */
