@@ -453,6 +453,13 @@ body {
     filter: brightness(0) saturate(100%) invert(98%) sepia(4%) saturate(1312%) hue-rotate(193deg) brightness(112%) contrast(73%);
 }
 
+#main {
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+}
+
 /* ==== animation six End ==== */
 
 /* ==== animation seven ( text video background ) start ==== */
@@ -567,5 +574,55 @@ audio {
     visibility: hidden;
 }
 
-
 /* ==== animation eight ( nav menu hover & click audio effect ) End ==== */
+
+/* ==== animation nine start ( text rotate ) ====  */
+
+.animation-nine {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url("../images/mitesh\ photos.jpg");
+    background-size: cover;
+    border-radius: 100vmax;
+    background-position: center;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: consolas;
+    color: white;
+    font-size: 17px;
+}
+
+.text span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
+
+/* ==== animation nine End ( text rotate ) ====  */
